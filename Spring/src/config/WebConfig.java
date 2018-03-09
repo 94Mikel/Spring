@@ -46,7 +46,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/world");
         dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setPassword("admin");
      
         return dataSource;
     }
@@ -61,7 +61,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 		Properties props = new Properties();
 
-		props.setProperty("dialect", "org.hibernate.dialect.MySQL5Dialect");
+		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 
 		sfb.setHibernateProperties(props);
 		
